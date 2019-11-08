@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy To Docker') {
             steps {
                 echo 'Deploying to Docker....'
-                print 'cmd /c dir d:\\workspace'.execute().text
+                print 'cmd /c :\\testgroovy.bat'.execute()
                 echo 'Deploying to Docker Done!'
             }
         }
