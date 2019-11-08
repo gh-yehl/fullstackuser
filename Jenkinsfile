@@ -1,5 +1,5 @@
 
-def jenkins_home_path = System.getenv("JENKINS_HOME")
+def jenkins_home_path = System.getenv("JENKINS_HOME") + "\\package"
 
 pipeline {
     agent any
