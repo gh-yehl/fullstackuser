@@ -22,6 +22,7 @@ pipeline {
             steps {
                 echo 'Deploying to Docker....'
                 print 'cmd /c dir d:\\workspace'.execute().text
+                echo 'Deploying to Docker Done!'
             }
         }
     }
