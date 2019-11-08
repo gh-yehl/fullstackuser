@@ -1,6 +1,5 @@
 
-def envVars = Jenkins.instance.getGlobalNodeProperties()[0].getEnvVars()
-def jenkins_home_path = envVars['JENKINS_HOME']
+def jenkins_home_path = System.getenv("JENKINS_HOME")
 
 pipeline {
     agent any
@@ -28,8 +27,7 @@ pipeline {
 
             steps {
                 echo 'Deploying to Docker....'
-                println envVars['JENKINS_HOME']
-                println '${jenkins_home_path}'
+                echo '${jenkins_home_path}'
                 //print 'cmd /c d:\\testgroovy.bat'.execute()
                 //print 'cmd /c git clone https://github.com/gh-yehl/fullstackuser.git d:\\new'.execute()
                 print 'git clone git@github.com:gh-yehl/fullstackuser.git ${jenkins_home_path}\\package'.execute()
