@@ -30,7 +30,7 @@ import java.util.List;
 @RestController
 public class MentorController {
 
-    public String baseURL = "http://localhost:8081";
+    public String baseURL = "http://trainings:9001";
     List<TrainingsDTO> list = new ArrayList<TrainingsDTO>();
 
     @Autowired
@@ -84,6 +84,7 @@ public class MentorController {
 
         return list;
     }
+
 
     @RequestMapping("/mentorCompletedTraining")
     public List<MentorMenuDTO> completedTrainings(HttpServletRequest request) {
