@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy To Docker') {
             steps {
                 echo 'Deploying to Docker....'
-                echo '%JENKINS_HOME%\\package'
+                echo '{JENKINS_HOME}\\package'
                 //print 'cmd /c d:\\testgroovy.bat'.execute()
                 //print 'cmd /c git clone https://github.com/gh-yehl/fullstackuser.git d:\\new'.execute()
                 print 'git clone git@github.com:gh-yehl/fullstackuser.git d:\\new'.execute()
