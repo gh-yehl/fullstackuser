@@ -3,23 +3,25 @@ pipeline {
 
     stages {
         stage('Download SourceCode') {
-                    steps {
-                        echo 'Download from GitHub..'
-                    }
-                }
-        stage('Build SourceCode') {
             steps {
-                echo 'Building..'
+                echo 'Download SourceCode from GitHub..'
             }
         }
-        stage('Test') {
+
+        stage('Maven Build SourceCode') {
             steps {
-                echo 'Testing..'
+                echo 'Maven Building..'
+            }
+        }
+        stage('Junit Test') {
+            steps {
+                echo 'Junit Testing..'
             }
         }
         stage('Deploy To Docker') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying to Docker....'
+                print 'cmd /c dir d:\\workspace'.execute().text
             }
         }
     }
