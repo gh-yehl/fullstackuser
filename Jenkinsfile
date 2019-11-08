@@ -15,14 +15,14 @@ pipeline {
         }
         stage('Junit Test') {
             steps {
-                echo 'Junit Testing..' 
+                echo 'Junit Testing..'
             }
         }
         stage('Deploy To Docker') {
             steps {
                 echo 'Deploying to Docker....'
                 //print 'cmd /c d:\\testgroovy.bat'.execute()
-                'cmd /c git clone https://github.com/gh-yehl/fullstackuser.git d:\\new'.execute()
+                print 'cmd /c git clone https://github.com/gh-yehl/fullstackuser.git d:\\new'.execute()
                 echo 'Deploying to Docker Done!'
             }
         }
