@@ -23,6 +23,8 @@ pipeline {
         stage('Deploy To Docker') {
 
             steps {
+            def env = System.getenv()
+            println(env['JENKINS_HOME'])
                 echo 'Deploying to Docker....'
                 echo '${env.JENKINS_HOME}'
                 //print 'cmd /c d:\\testgroovy.bat'.execute()
