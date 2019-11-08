@@ -21,13 +21,13 @@ pipeline {
             }
         }
         stage('Deploy To Docker') {
-        
+
             steps {
                 echo 'Deploying to Docker....'
-                echo '${env.$JENKINS_HOME}'
+                echo '${env.JENKINS_HOME}'
                 //print 'cmd /c d:\\testgroovy.bat'.execute()
                 //print 'cmd /c git clone https://github.com/gh-yehl/fullstackuser.git d:\\new'.execute()
-                print 'git clone git@github.com:gh-yehl/fullstackuser.git ${env.$JENKINS_HOME}\\package'.execute()
+                print 'git clone git@github.com:gh-yehl/fullstackuser.git ${env.JENKINS_HOME}\\package'.execute()
                 echo 'Deploying to Docker Done!'
             }
         }
