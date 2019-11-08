@@ -1,3 +1,6 @@
+
+def env = System.getenv()
+
 pipeline {
     agent any
 
@@ -23,7 +26,6 @@ pipeline {
         stage('Deploy To Docker') {
 
             steps {
-            def env = System.getenv()
             println(env['JENKINS_HOME'])
                 echo 'Deploying to Docker....'
                 echo '${env.JENKINS_HOME}'
