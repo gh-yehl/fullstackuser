@@ -2,7 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Download SourceCode') {
+                    steps {
+                        echo 'Download from GitHub..'
+                    }
+                }
+        stage('Build SourceCode') {
             steps {
                 echo 'Building..'
             }
@@ -12,7 +17,7 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
+        stage('Deploy To Docker') {
             steps {
                 echo 'Deploying....'
             }
