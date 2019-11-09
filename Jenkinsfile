@@ -30,7 +30,8 @@ pipeline {
                 echo '${jenkins_home_path}'
                 //print 'cmd /c d:\\testgroovy.bat'.execute()
                 //print 'cmd /c git clone https://github.com/gh-yehl/fullstackuser.git d:\\new'.execute()
-                print 'git clone git@github.com:gh-yehl/fullstackuser.git "${jenkins_home_path}"'.execute()
+                //print 'git clone git@github.com:gh-yehl/fullstackuser.git "${jenkins_home_path}"'.execute()
+                ["git", "clone", "git@github.com:gh-yehl/fullstackuser.git","${jenkins_home_path}"].execute()
                 echo 'Deploying to Docker Done!'
             }
         }
