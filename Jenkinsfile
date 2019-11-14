@@ -6,10 +6,10 @@ pipeline {
     stages {
         stage('Download SourceCode') {
             steps {
-                echo 'Remove Original SourceCode and Packages..............................................'
+                echo 'Remove Original SourceCode and Packages>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
                 sh 'rm -rf /application/jenkins/deploy'
                 sh 'mkdir -p /application/jenkins/deploy'
-                echo 'Download SourceCode from GitHub......................................................'
+                echo 'Download SourceCode from GitHub>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
                 sh 'git clone git@github.com:gh-yehl/fullstackuser.git "${JENKINS_FOLDER}/deploy"'
                 echo "Source Code Download Completed!!!"
             }
@@ -17,8 +17,8 @@ pipeline {
 
         stage('Maven Build SourceCode') {
             steps {
-                echo 'Maven Packaging SourceCode..'
-                sh '"${MAVEN_HOME}"/bin/mvn -f "${JENKINS_FOLDER}/deploy"/pom.xml package'
+                echo 'Maven Packaging SourceCode>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
+                sh 'mvn -f "${JENKINS_FOLDER}/deploy"/pom.xml package'
                 echo 'Package SourceCode Completed'
             }
         }
