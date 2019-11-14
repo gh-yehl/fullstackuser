@@ -10,7 +10,7 @@ pipeline {
         stage('Download SourceCode') {
             steps {
                 echo 'Download SourceCode from GitHub..'
-                echo "${JENKINS_HOME}"
+                echo "${JENKINS_FOLDER}"
             }
         }
 
