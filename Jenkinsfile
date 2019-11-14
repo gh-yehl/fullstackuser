@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Maven Packaging SourceCode..'
                 sh '"${JENKINS_FOLDER}/deploy"/mvn package'
-                echo 'SourceCode is Packaged'
+                echo 'Package SourceCode Completed'
             }
         }
         stage('Junit Test') {
