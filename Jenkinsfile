@@ -10,7 +10,7 @@ pipeline {
         stage('Download SourceCode') {
             steps {
                 echo 'Download SourceCode from GitHub..'
-                echo "${MAVEN_HOME}"
+                echo "${JENKINS_HOME}"
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
 
             steps {
                 echo 'Deploying to Docker....'
-                echo "${jenkins_home_path}"
+                
                 //print 'cmd /c d:\\testgroovy.bat'.execute()
                 //print 'cmd /c git clone https://github.com/gh-yehl/fullstackuser.git d:\\new'.execute()
                 //print "cmd /c git clone git@github.com:gh-yehl/fullstackuser.git ${jenkins_home_path}".execute()
