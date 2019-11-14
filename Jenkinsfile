@@ -1,5 +1,5 @@
 
-def jenkins_home_path = System.getenv("JENKINS_HOME") + "\\package"
+//def jenkins_home_path = System.getenv("JENKINS_HOME") + "\\package"
 
 pipeline {
     agent any
@@ -10,7 +10,7 @@ pipeline {
         stage('Download SourceCode') {
             steps {
                 echo 'Download SourceCode from GitHub..'
-                echo "${JENKINS_HOME}"
+                echo "${MAVEN_HOME}"
             }
         }
 
