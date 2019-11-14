@@ -18,8 +18,7 @@ pipeline {
         stage('Maven Build SourceCode') {
             steps {
                 echo 'Maven Packaging SourceCode..'
-                sh 'cd "${JENKINS_FOLDER}/deploy"'
-                sh 'mkdir test-new'
+                sh 'mvn -f "${JENKINS_FOLDER}/deploy"/pom.xml package'
                 echo 'Package SourceCode Completed'
             }
         }
