@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Download SourceCode') {
             steps {
-                echo 'remove timeout'
+                echo 'remove timeout...'
                 echo 'Remove Original SourceCode and Packages'
                 sh 'rm -rf /application/jenkins/deploy/*'
                 echo 'Download SourceCode from GitHub..'
