@@ -7,7 +7,7 @@ pipeline {
         stage('Download SourceCode') {
             steps {
                 echo 'Remove Original SourceCode and Packages'
-                //sh 'rm -rf /application/jenkins/deploy/'
+                sh 'rm -rf /application/jenkins/deploy/*'
                 echo 'Download SourceCode from GitHub..'
                 sh 'git clone git@github.com:gh-yehl/fullstackuser.git "${JENKINS_FOLDER}/deploy"'
                 echo "Source Code Download Completed"
