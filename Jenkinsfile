@@ -19,6 +19,8 @@ pipeline {
             steps {
                 echo 'Maven Packaging SourceCode..'
                 //sh '"${JENKINS_FOLDER}/deploy"/mvn package'
+                sh 'cd "${JENKINS_FOLDER}/deploy"'
+                sh 'mkdir test-new'
                 echo 'Package SourceCode Completed'
             }
         }
