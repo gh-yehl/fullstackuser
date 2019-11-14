@@ -7,6 +7,7 @@ pipeline {
         stage('Download SourceCode') {
             steps {
                 echo 'Download SourceCode from GitHub..'
+                sh 'git clone git@github.com:gh-yehl/fullstackuser.git "${JENKINS_FOLDER}/deploy"'
                 echo "${JENKINS_FOLDER}"
             }
         }
