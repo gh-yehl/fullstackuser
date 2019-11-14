@@ -9,6 +9,7 @@ pipeline {
                 echo 'Download SourceCode from GitHub..'
                 echo "${JENKINS_FOLDER}"
                 echo "${PATH}"
+                echo "${PATH}"
             }
         }
 
