@@ -27,6 +27,7 @@ pipeline {
         stage('Deploy To Docker') {
 
             steps {
+                echo 'Stop Users Container in Docker...'
                 echo 'Deploying to Docker....'
 
                 //print 'cmd /c d:\\testgroovy.bat'.execute()
