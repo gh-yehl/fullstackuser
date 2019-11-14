@@ -8,13 +8,15 @@ pipeline {
             steps {
                 echo 'Download SourceCode from GitHub..'
                 sh 'git clone git@github.com:gh-yehl/fullstackuser.git "${JENKINS_FOLDER}/deploy"'
-                echo "${JENKINS_FOLDER}"
+                echo "Source Code Download Completed"
             }
         }
 
         stage('Maven Build SourceCode') {
             steps {
-                echo 'Maven Building..'
+                echo 'Maven Packaging SourceCode..'
+                sh '"${JENKINS_FOLDER}/deploy"/mvn package'
+                echo 'SourceCode is Packaged'
             }
         }
         stage('Junit Test') {
