@@ -1,5 +1,5 @@
 FROM java:8
-VOLUME /tmp
+#VOLUME /tmp
 
 WORKDIR /application/jenkins/deploy/src/main/docker
 RUN pwd
