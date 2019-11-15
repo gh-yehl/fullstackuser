@@ -34,6 +34,7 @@ pipeline {
                 sh 'docker stop users'
                 sh 'docker rm users'
                 echo '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<   Create New Image and Users Container   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
+                
                 //print 'cmd /c d:\\testgroovy.bat'.execute()
                 //print 'cmd /c git clone https://github.com/gh-yehl/fullstackuser.git d:\\new'.execute()
                 //print "cmd /c git clone git@github.com:gh-yehl/fullstackuser.git ${jenkins_home_path}".execute()
