@@ -1,4 +1,5 @@
 FROM java:8
 VOLUME /tmp
-ADD /application/jenkins/deploy/target/service-users-1.0-SNAPSHOT.jar service-users.jar
+ADD service-users-1.0-SNAPSHOT.jar service-users.jar
+RUN pwd
 ENTRYPOINT ["java","-Xms200m","-Xmx300m","-jar","/service-users.jar"]
