@@ -31,6 +31,7 @@ pipeline {
 
             steps {
                 echo '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<   Stop Users Container in Docker   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
+                sh 'docker stop users'
                 echo '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<   Deploying to Docker   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
 
                 //print 'cmd /c d:\\testgroovy.bat'.execute()
