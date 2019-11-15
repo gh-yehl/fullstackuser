@@ -105,5 +105,9 @@ public class ApplicationController {
 //        UsersDTO usersDTO = usersService.findUsers(1);
 //        return usersDTO;
 //    }
+@RequestMapping("/test")
+public String test(HttpServletRequest request) {
+    return "heiha";
+}
 
 }
